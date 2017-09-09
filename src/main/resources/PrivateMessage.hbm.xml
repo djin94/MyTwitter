@@ -1,0 +1,21 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="ru.katechon.domain.PrivateMessages" table="private_messages">
+        <meta attribute="class-description">
+            This class contains the user detail.
+        </meta>
+
+        <id name="id" type="int" column="id">
+            <generator class="identity"/>
+        </id>
+
+        <property name="message" column="message" type="string"/>
+        <property name="date" column="date" type="string"/>
+        <many-to-one name="userSender" column="user_id_sender" class="ru.katechon.domain.Users" cascade="save-update"/>
+        <many-to-one name="userRecipient" column="user_id_recipient" class="ru.katechon.domain.Users" cascade="save-update"/>
+
+    </class>
+</hibernate-mapping>

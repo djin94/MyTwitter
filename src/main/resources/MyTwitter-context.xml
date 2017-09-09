@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="users" class="ru.katechon.storage.UsersStorage">
+        <lookup-method name="values"/>
+    </bean>
+    <bean id="messages" class="ru.katechon.storage.MessagesStorage">
+        <lookup-method name="values"/>
+    </bean>
+    <bean id="privateMessages" class="ru.katechon.storage.PrivateMessagesStorage">
+        <lookup-method name="values"/>
+    </bean>
+    <bean id="roles" class="ru.katechon.storage.RolesStorage">
+        <lookup-method name="values"/>
+    </bean>
+
+</beans>

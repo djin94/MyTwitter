@@ -1,0 +1,21 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="ru.katechon.domain.Users" table="users">
+        <meta attribute="class-description">
+            This class contains the user detail.
+        </meta>
+
+        <id name="id" type="int" column="id">
+            <generator class="identity"/>
+        </id>
+
+        <property name="login" column="login" type="string"/>
+        <property name="password" column="password" type="string"/>
+        <property name="email" column="email" type="string"/>
+        <many-to-one name="role" column="role_id" class="ru.katechon.domain.Roles" cascade="save-update"/>
+
+    </class>
+</hibernate-mapping>
