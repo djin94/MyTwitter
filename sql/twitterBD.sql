@@ -22,6 +22,9 @@ create table private_messages (
 	message VARCHAR(255),
   date DATE
 );
-INSERT INTO roles (title) VALUES ('administrator');
-INSERT INTO roles (title) VALUES ('user');
-INSERT INTO roles (title) VALUES ('guest');
+INSERT INTO roles (title) VALUES ('administrator');//1
+INSERT INTO roles (title) VALUES ('user');//2
+INSERT INTO roles (title) VALUES ('guest');//3
+INSERT INTO users (login, password, email, role_id) VALUES ('djin94', '123456', 'djin94@yandex.ru', 2);
+INSERT INTO users (login, password, email, role_id) VALUES ('heilragnarock', '654321', 'heilragnarock@yandex.ru', 2);
+INSERT INTO users (login, password, email, role_id) VALUES ('admin', 'admin', 'wotan.uber.alles@yandex.ru', 1);
