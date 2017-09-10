@@ -17,6 +17,7 @@
         <div class="form-group">
             <input type="text" name="login" class="form-control"/>
             <input type="password" name="password" class="password-field"/>
+            <input type="text" class="search">
         </div>
     </form>
 
